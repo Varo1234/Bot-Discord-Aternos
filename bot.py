@@ -17,10 +17,11 @@ secret_key = data["credentials"]["discord_bot"]
 user = data["credentials"]["aternos_user"]
 pswd = data["credentials"]["aternos_pwsd"]
 channel_id = data["credentials"]["discord_channel"]
+srv_ws = data["credentials"]["n_servidor"]
 
 # Para websocket
 aternos = Client.from_credentials(user, pswd)
-srv_1 = aternos.list_servers()[0]  # Cambiar numero para websocket de servidor
+srv_1 = aternos.list_servers()[srv_ws]  # Cambiar numero para websocket de servidor
 socket = srv_1.wss()
 
 print("Iniciando Bot")
@@ -341,6 +342,7 @@ async def on_ready():
 	embed.add_field(name=prefix + "inicio [n° de servidor]", value="Inicia el servidor seleccionado (tendras que "
 	                                                               "esperar a que arranque. cuando se inicie por "
 	                                                               "completo te avisará) ", inline=False)
+	embed.add_field(name=prefix + "jugadores [n° de servidor]", value="Muestra a los jugadores registrados del servidor", inline=False)
 	await bot.get_channel(channel_id).send(embed=embed)
 
 
