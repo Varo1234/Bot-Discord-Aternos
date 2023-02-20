@@ -28,7 +28,7 @@ El bot solo soporta un websocket, por lo que solo es posible que te avise si se 
 
 ## Los comandos:
 
-1.- $servidores                 -> Muestra la lista de servidores
+1.- $servidores                 -> Muestra la lista de servidores\n
 2.- $info [n° de servidor]      -> Muestra la información del servidor seleccionado
 3.- $estatus [n° de servidor]   -> Muestra el estatus del servidor seleccionado
 4.- $inicio [n° de servidor]    -> Inicia el servidor seleccionado (tendrás que esperar a que inicie el servidor, cuando se inicie por completo te avisará)
